@@ -30,8 +30,7 @@ class MailList extends Component {
     let mails = this.props.mailsFromStore[activeFolder].map((mail) => {
       return (
         <div>
-          
-          <MailItem key={mail.id} mail={mail} openLetter ={this.onOpenLetter} activeLetter = {this.state.openId}/>
+            <MailItem key={mail.id} mail={mail} openLetter ={this.onOpenLetter} activeLetter = {this.state.openId}/>
         </div>
       )
     })
@@ -53,6 +52,7 @@ const mapStateToProps = (state) => {
     isUpdeting: state.mails.isUpdeting
   }
 }
+
 const mapDispatchToProps = (dispatch) => {
   return {
     updateEmail: () => {

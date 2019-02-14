@@ -1,5 +1,6 @@
 import React,{ Component } from 'react'
 import PropTypes from 'prop-types'
+import './newmailform.scss'
 
 class NewMailForm extends Component{
  
@@ -48,7 +49,7 @@ class NewMailForm extends Component{
                         name='email'
                         value={this.state.email}
                         onChange={this.onInputChange} 
-                        placeholderer=''>
+                        placeholder='Получатели'>
                     </input>
                 </div>
                 
@@ -58,7 +59,7 @@ class NewMailForm extends Component{
                         name='subject' 
                         value={this.state.subject}
                         onChange={this.onInputChange}  
-                        placeholderer=''>
+                        placeholder='Тема'>
                     </input>
                 </div>
                 <div>

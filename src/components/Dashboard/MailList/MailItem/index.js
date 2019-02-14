@@ -23,16 +23,16 @@ class MailItem extends Component{
                  <li onClick = {() => {this.props.openLetter(mail.id)}}>
                  <NavLink to={`/mail/${mail.id}`} className={isRead}>
                      {mail.from} - {mail.subject}
-                    {this.props.activeLetter === mail.id ? <p>{mail.text}</p> : null}
+                     {this.props.activeLetter === mail.id ? <p>{mail.text}</p> : null}
                  </NavLink>
                     
                     <button onClick = {() => this.props.delEmail(mail.id, this.props.mailsFromStore)}>Delete</button>
-                    <button onClick = {() =>this.props.makrAsRead(mail.id)}>Read</button>
+                    <button onClick = {() => this.props.makrAsRead(mail.id)}>Read</button>
                 </li>
                 
         return(
             <>
-               {this.props.isFetching ? <li>Идет удаление...</li> : mailItem}
+               {this.props.isFetching ? <li> Идет удаление... </li> : mailItem}
             </>
         )
     }

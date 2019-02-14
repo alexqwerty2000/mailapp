@@ -22,7 +22,7 @@ export function delEmail(delID, mailList){
                 })
             }
             dispatch({type: DEL_MAIL_SUCCESS, payload: {mailList: newMailList}})
-        }, 1000)
+        }, 2000)
     }
 }
 
@@ -40,7 +40,7 @@ export function updateEmail(){
 }
 
 export function makrAsRead(mailID){
-    return (dispatch, state) =>{
+    return (dispatch, state) => {
         dispatch({
             type: START_MARK_IS_READ,
         });
